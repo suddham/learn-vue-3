@@ -1,6 +1,16 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <h1>VMail Inbox</h1>
+    <table>
+      <tbody>
+        <tr v-for="email in emails" :key="email.id" class="pointer-events-auto">
+          <td>{{ email.from }}</td>
+          <td>
+            <p class="font-semibold">{{ email.subject }}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
